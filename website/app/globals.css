@@ -24,3 +24,28 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@layer utilities {
+  .bg-grid {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 25px 25px;
+    animation: move-bg 60s linear infinite;
+  }
+
+  @keyframes move-bg {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 1000px 1000px;
+    }
+  }
+
+  .drop-shadow-glow {
+    text-shadow: 0 0 8px rgba(0,255,255,0.6);
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s infinite ease-in-out;
+  }
+}
