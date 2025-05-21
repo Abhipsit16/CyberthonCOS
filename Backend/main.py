@@ -7,7 +7,7 @@ import numpy as np
 from scipy.io import wavfile
 from scipy.signal import stft, istft
 import uuid
-from model import predict
+from PredictionModule import predict
 
 app = FastAPI()
 
