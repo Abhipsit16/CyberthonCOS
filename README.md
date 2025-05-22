@@ -94,7 +94,7 @@ An **LSTM-based Emotion Detection System** that processes **live emergency audio
 
 ---
 
-### 5. 🛰️ Multi-Modal Fusion *(Coming Soon)*
+### 5. 🛰️ Multi-Modal Fusion 
 Combine:
 
 - 🎧 **Audio-based emotion detection**
