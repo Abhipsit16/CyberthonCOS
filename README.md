@@ -139,4 +139,25 @@ Chandigarh—a modern Indian city facing a **rise in domestic violence, cybercri
 - **Planned Features:**
   - Integration of location tracking for incoming/outgoing calls.
   - Integration of the calling system within the application.
+ 
+---
+
+## How to test?
+
+- ## Clone the repository to local system
+```
+git clone https://github.com/Abhipsit16/CyberthonCOS
+```
+- ## Change directory to website and run
+```
+npm i
+npm run dev
+```
+- ## Come to the root directory, change directory to Backend then run
+```
+uv sync
+uv run -- uvicorn main:app --reload
+```
+
+### You need to have node and uv installed in your system and added to environment variables
 
