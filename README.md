@@ -1,5 +1,5 @@
 # 🚨 CyberthonCOS  
-### 🎯 *Emotion-Aware Emergency Call System for Smarter, Faster Public Safety*
+### 🎯 *Smart Policing - Voice Emotion Recognition from Emergency Calls*
 
 > “In an emergency, what you feel may be more important than what you say.”
 
