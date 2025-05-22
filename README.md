@@ -1,128 +1,133 @@
-# CyberthonCOS
-🎯 Emotion-Aware Emergency Call System for Smarter, Faster Public Safety
-“In an emergency, what you feel may be more important than what you say.”
+# 🚨 CyberthonCOS  
+### 🎯 *Emotion-Aware Emergency Call System for Smarter, Faster Public Safety*
 
-🚨 Why It Matters
-Traditional emergency helpline systems rely heavily on verbal content to detect urgency. But in real-life crises—especially in domestic violence, cyber abuse, or public safety threats—emotions like fear, distress, or aggression often hide behind whispers, panic, or suppressed voices.
+> “In an emergency, what you feel may be more important than what you say.”
 
-⚠️ The Problem:
-🚫 Overwhelming call volumes
+---
 
-🔇 Chaotic background noise, whispers, or suppressed voices
+## ⚠️ The Problem
 
-🌐 Multilingual inputs (Hindi, Punjabi, English, Hinglish)
+Traditional emergency helplines rely too much on *verbal content*—missing hidden emotional cues critical in:
 
-🧍‍♀️ Victims unable to articulate danger directly
+- 🚫 **Overwhelming call volumes**
+- 🔇 **Chaotic background noise**, whispers, or suppressed voices  
+- 🌐 **Multilingual inputs** (Hindi, Punjabi, English, Hinglish)  
+- 🧍‍♀️ **Victims unable to articulate danger directly**  
+- 🐢 **Delayed triage and missed red flags**  
 
-🐢 Delayed triage and missed red flags
+---
 
-🔥 The Solution:
-An AI-powered system that understands emotions in real time—even when words fail—helping emergency teams respond faster, smarter, and more empathetically.
+## 🔥 The Solution
 
-🧠 What We Built
-An LSTM-based Emotion Detection System that processes live audio from emergency calls to:
+An **AI-powered system** that decodes *real-time emotions* in calls—even when words fail—enabling **faster, smarter, more empathetic responses**.
 
-🔊 Detect emotions like fear, panic, anger, and distress in real-time
+---
 
-⚡ Prioritize high-urgency calls
+## 🧠 What We Built
 
-🛡️ Enable emotion-aware policing
+An **LSTM-based Emotion Detection System** that processes **live emergency audio** to:
 
-📍 Incorporate location awareness, gender, and context
+- 🔊 Detect emotions like **fear, panic, anger, distress**
+- ⚡ **Prioritize high-urgency calls**
+- 🛡️ Enable **emotion-aware policing**
+- 📍 Use **location, gender, and context**
+- 🔁 **Learn continuously** from real-world data
 
-🔁 Improve continuously through real-world feedback
+---
 
-🔍 Data & Preprocessing
-🎙️ Audio Dataset
-We used the TESS Toronto Emotional Speech Dataset with over 800 emotion-tagged audio samples. Every clip features the same sentence, spoken with different emotions—making the text content irrelevant.
+## 🎙️ Data & Preprocessing
 
-✅ This enables multilingual compatibility even when trained on English audio, because the model learns tone, not meaning.
+### 📂 Dataset:
+- **TESS Toronto Emotional Speech Dataset**
+- 800+ emotion-tagged audio samples  
+- Same sentence spoken in various emotions → **Text becomes irrelevant** → **Multilingual support**
 
-🔧 Preprocessing Steps
-Format conversion to .wav
+### 🛠️ Preprocessing Steps:
+- 🎵 Convert format to `.wav`
+- 📢 Normalize volume
+- 🔊 Remove noise: **FFT → High Pass Filter → Inverse FFT**
+- 😮 Preserve **short silences** (breathing/stress)
+- 🧹 Remove **long silences & distortions**
 
-Volume normalization
+---
 
-Noise reduction via FFT → High Pass Filter → Inverse FFT
+## 🤖 Why LSTM?
 
-Retention of short silences to preserve breathing/stress cues
+**LSTM (Long Short-Term Memory)** models are ideal for **sequential audio analysis**, because they:
 
-Removal of long silences and distortions
+- 🎚️ Handle **small time segments** (speaker isolation)
+- 🗣️ Support **multi-speaker scenarios** (e.g., abuser yelling, victim whispering)
+- 🎯 Predict emotional tone **per segment** and **aggregate over time**
 
-🤖 Why LSTM?
-LSTM (Long Short-Term Memory) models are ideal for sequential audio processing. They retain temporal context, allowing us to:
+---
 
-🎚️ Break audio into small time segments (to isolate speakers)
+## ⚙️ Key Features
 
-🗣️ Handle multi-speaker scenarios (e.g. abuser yelling, victim whispering)
+### 1. 🚦 Real-Time Emergency Call Prioritization
+- Detects **stress, fear, panic**, even in **whispers or crying**
+- Auto-flags **high-emotion calls**
+- Improves **response time**
+- Reduces **manual dispatcher load**
 
-🎯 Predict emotional tone per segment and aggregate insights
+---
 
-⚙️ Key Features
-1. 🚦 Real-Time Emergency Call Prioritization
-Detect stress, panic, or fear even if the caller is whispering or crying.
+### 2. 📲 Mobile App Integration
+- Connects with **SOS apps** or **panic buttons**
+- Analyzes **tone under stress**
+- Sends **instant alerts** to police or mental health services
 
-Automatically flag emotionally intense calls
+---
 
-Boost response time for victims in critical danger
+### 3. 🧩 Police Control Room Integration
+- API-based **plug-and-play** design for existing 100/112 systems
+- Adds **emotion-aware intelligence**
+- Enables **automated triaging** and dispatch suggestions
 
-Reduce manual analysis load for dispatchers
+---
 
-2. 📲 Mobile App Integration
-Integrate with SOS apps or panic buttons.
+### 4. 🧠 Continuous Learning Loop
+- Learns from **every new call**
+- Adapts to:
+  - 🗣️ **Regional accents**
+  - 🌆 **Urban noise**
+  - 🌐 **Multilingual inputs**
 
-Analyze user tone in distress
+---
 
-Trigger instant alerts to law enforcement or mental health services
-
-3. 🧩 Police Control Room Integration
-Designed for plug-and-play API integration into existing 100/112 helpline systems.
-
-Add emotion-aware intelligence to current infrastructure
-
-Enable automated triaging & dispatch recommendations
-
-4. 🧠 Continuous Learning Loop
-Get smarter with every call.
-
-Model improves with new emergency data
-
-Adapts to regional accents, urban noise, and multilingual inputs
-
-5. 🛰️ Multi-Modal Fusion (Coming Soon)
+### 5. 🛰️ Multi-Modal Fusion *(Coming Soon)*
 Combine:
 
-Audio-based emotion detection
+- 🎧 **Audio-based emotion detection**
+- 📄 **Text transcript analysis**
+- 🌪️ **Background noise classification**
+- 📍 **Location-based crime history**
 
-Text transcripts
+→ Smarter, data-driven dispatch decisions
 
-Background noise classification
+---
 
-Location-based crime history
-To enable smarter dispatch decisions
+## 🌐 Use Cases
 
-🌐 Use Cases
-🚓 Police Emergency Units
+- 🚓 **Police Emergency Units**
+- 🧕 **Women Safety Cells**
+- 🧠 **Mental Health Helplines**
+- 🔥 **Fire & Disaster Response**
+- 🚑 **Ambulance Services**
 
-🧕 Women Safety Cells
+---
 
-🧠 Mental Health Helplines
+## 🌟 Why Chandigarh (Pilot City)?
 
-🔥 Fire & Disaster Response
+Chandigarh—a modern Indian city facing a **rise in domestic violence, cybercrime, and public safety threats**—is the **ideal testbed** for this AI-first emergency response model.
 
-🚑 Ambulance Services
+- Emotion-aware triage = **faster response**, **higher trust**, **safer cities**
 
-🌟 Why Chandigarh (Pilot City)?
-As a modern Indian city facing rising domestic, cyber, and public safety threats, Chandigarh is a perfect testbed for an AI-first policing model. Emotion-aware triage can revolutionize public trust and response times.
+---
 
-📈 Impact
-🕐 Faster Police Dispatch
+## 📈 Impact
 
-🔎 Better Urgency Detection
-
-💬 Support for Silent or Suppressed Victims
-
-📞 Smarter Call Routing & Prioritization
-
-🛡️ A New Standard for Tech-Enabled Public Safety in India
-
+- 🕐 **Faster police dispatch**
+- 🔎 **Better urgency detection**
+- 💬 **Support for silent or suppressed victims**
+- 📞 **Smarter call routing & prioritization**
+- 🛡️ **New standard for tech-enabled public safety in India**
