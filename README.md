@@ -131,3 +131,12 @@ Chandigarh—a modern Indian city facing a **rise in domestic violence, cybercri
 - 💬 **Support for silent or suppressed victims**
 - 📞 **Smarter call routing & prioritization**
 - 🛡️ **New standard for tech-enabled public safety in India**
+
+- ## Project Update
+
+- Developed the initial version of the model.
+- Built a basic UI interface for the project.
+- **Planned Features:**
+  - Integration of location tracking for incoming/outgoing calls.
+  - Integration of the calling system within the application.
+
